@@ -1,3 +1,32 @@
 <ObjectLayer>
- <Layer Name="Main" FullName="Main" GUID="{C4F462DF-1140-8E7D-7E1B-EFD60DBDAAAD}" Hidden="0" Frozen="0" Expanded="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1"/>
+ <Layer Name="Main" FullName="Main" GUID="{C4F462DF-1140-8E7D-7E1B-EFD60DBDAAAD}" Hidden="0" Frozen="0" Expanded="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Entity" Layer="Main" LayerGUID="{C4F462DF-1140-8E7D-7E1B-EFD60DBDAAAD}" Id="{D2A3C921-3872-5518-D578-7A073555FCE2}" Name="Turret1" Pos="163.47699,90.542297,32.060749" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Turret" HasEntity="1">
+    <Properties esFaction="Players" objModel="objects/weapons/turret/turret.cdf" PrimaryWeapon="TurretGun" PrimaryWeaponFovDegrees="15" PrimaryWeaponJointName="weaponjoint" PrimaryWeaponRangeCheckOffset="2" esTurretState="Deployed" bUsable="0" bUsableOnlyOnce="1" UseMessage="">
+     <AutoAimTargetParams fallbackOffset="1.2" innerRadius="0.5" outerRadius="0.6" physicsTargetBone="weaponjoint_ref" primaryTargetBone="weaponjoint_ref" secondaryTargetBone="arcjoint" snapRadius="1.5" snapRadiusTagged="3"/>
+     <Behavior>
+      <FireTarget fMaxStopFireSeconds="0.75" fMinStopFireSeconds="0.5"/>
+      <FollowTarget fAimVerticalOffset="-0.3" fMaxStartFireDelaySeconds="0.15" fMinStartFireDelaySeconds="0.1" fPredictionDelaySeconds="0.1" fReevaluateTargetSeconds="0.5"/>
+      <LostTarget fBackToSearchSeconds="5" fDampenVelocityTimeSeconds="10" fLastVelocityValueWeight="0.9"/>
+      <SearchSweep fDistance="100" fHeight="1" fRandomOffsetRange="3" fRandomOffsetSeconds="1" fYawDegreesHalfLimit="45" fYawDegreesPerSecond="90"/>
+      <SearchSweepPause fLimitPauseSeconds="1" fRandomOffsetRange="5" fRandomOffsetSeconds="0.4"/>
+      <Undeployed bIsThreat="0"/>
+     </Behavior>
+     <Damage fileBodyDamage="Libs/BodyDamage/BodyDamage_HumanTurret.xml" fileBodyDamageParts="Libs/BodyDamage/BodyParts_HumanTurret.xml" fileBodyDestructibility="Libs/BodyDamage/BodyDestructibility_HumanTurret.xml" health="1000"/>
+     <Laser DotEffect="" bEnabled="0" objGeometry="objects/weapons/attachments/laser_beam/laser_beam.cgf" JointName="weaponjoint" fOffsetX="0.45" fOffsetY="-0.87" fOffsetZ="-0.025" fRange="150" fShowDot="1" SourceEffect="" fThickness="0.8"/>
+     <Mannequin fileAnimationDatabase="Animations/Mannequin/ADB/turret.adb" fileControllerDef="Animations/Mannequin/ADB/turretControllerDefs.xml"/>
+     <RateOfDeath attackRange="100" hitMaxRange="0.5" hitMinRange="0.1" hitOffsetIntervalSeconds="0.7" missMaxRange="3" missMinRange="2" missOffsetIntervalSeconds="0.7"/>
+     <Sound fAlertedTimeoutSeconds="60" GameHintName="HumanTurret_Gun" HorizontalJointName="arcjoint" fHorizontalLoopingSoundDelaySeconds="0.3" fLockOnTargetSeconds="0.2" fMovementStartSoundThresholdDegreesSecond="4" fMovementStopSoundThresholdDegreesSecond="0.2" soundAlerted="sounds/w_turret:turret_functionality:alerted" soundHorizontalMovementLoop="sounds/w_turret:turret_functionality:turn_loop" soundHorizontalMovementStart="sounds/w_turret:turret_functionality:turn_start" soundHorizontalMovementStop="sounds/w_turret:turret_functionality:turn_stop" soundLockedOnTarget="" soundVerticalMovementLoop="sounds/w_turret:turret_functionality:vertical_loop" soundVerticalMovementStart="sounds/w_turret:turret_functionality:turn_loop" soundVerticalMovementStop="sounds/w_turret:turret_functionality:vertical_stop" VerticalJointName="Def_Gun_JNT" fVerticalLoopingSoundDelaySeconds="0.3"/>
+     <Vision fCloakDetectionDistance="4" fEyeFov="25" EyeJointName="weaponjoint" fEyeRange="40" fRadarFov="180" fRadarRange="20" fRadarVerticalOffset="2"/>
+    </Properties>
+    <Components>
+     <Component typeId="{9824845C-FE37-7889-B172-4A63F331D8A2}"/>
+     <Component typeId="{EC4E2FDC-DCFF-4AB3-A691-B9CC4ECE5788}"/>
+     <Component typeId="{10000000-1000-1000-1000-100000000000}"/>
+     <Component typeId="{BD6403CF-3B49-F39E-9540-3FD1C6D4F755}"/>
+    </Components>
+    <Properties2 fCloakDetectionDistanceMultiplier="1" groupId="-1"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
 </ObjectLayer>
