@@ -1,0 +1,6 @@
+<download name="CryEngineProject" type="Map">
+ <index src="filelist.xml" dest="filelist.xml"/>
+ <files>
+  <file src="level.pak" dest="level.pak" size="143465" md5="a9d03c126fe4a45dc57a93539ebe29cf"/>
+ </files>
+</download>
